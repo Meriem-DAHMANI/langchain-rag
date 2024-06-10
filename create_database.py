@@ -49,7 +49,7 @@ def save_to_chroma(chunks: list[Document]):
         shutil.rmtree(CHROMA_PATH)
 
     # Create a new DB from the documents.
-    embeddings = OpenAIEmbeddings(api_key="sk-proj-EQnDHdOtWnVdAtDCa5gDT3BlbkFJz2dVMEAmMOrD7QsYTuer") 
+    embeddings = OpenAIEmbeddings(api_key="") 
     db = Chroma.from_documents(
         chunks, embeddings, persist_directory=CHROMA_PATH
     )
