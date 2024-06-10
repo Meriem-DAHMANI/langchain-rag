@@ -40,7 +40,7 @@ def main():
     prompt = prompt_template.format(context=context_text, question=query_text)
     print(prompt)
 
-    model = ChatOpenAI(api_key="sk-proj-EQnDHdOtWnVdAtDCa5gDT3BlbkFJz2dVMEAmMOrD7QsYTuer")
+    model = ChatOpenAI(api_key="")
     response_text = model.predict(prompt)
 
     sources = [doc.metadata.get("source", None) for doc, _score in results]
